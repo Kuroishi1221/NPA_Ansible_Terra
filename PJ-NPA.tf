@@ -430,6 +430,6 @@ output "aws_instance_public_ip_db2" {
 value = "ssh -i vockey.pem ec2-user@${aws_instance.db2.public_ip}"
 }
 
-output "aws_instance_public_ip_ansibleNode" {
+output "aws_instance_public_ip_ansibleNode2" {
 value = "ssh -i vockey.pem ec2-user@${aws_instance.web2.public_ip}"
 }
