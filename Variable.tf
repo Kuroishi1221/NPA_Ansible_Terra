@@ -2,10 +2,18 @@
 # VARIABLES
 ##################################################################################
 
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-variable "private_key_path" {}
-variable "key_name" {}
+variable "aws_access_key" {
+    default = "AKIA6KDTSZIXYUBPJ3SX"
+}
+variable "aws_secret_key" {
+    default = "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"
+}
+variable "private_key_path" {
+    default = "labsuser.pem"
+}
+variable "key_name" {
+    default = "vockey"
+}
 variable "region" {
   default = "us-east-1"
 }

@@ -43,8 +43,8 @@ data "aws_ami" "aws-linux-2" {
 resource "aws_instance" "NPA21_ansible" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public1.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet1.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
   connection {
@@ -74,8 +74,8 @@ resource "aws_instance" "NPA21_ansible" {
 resource "aws_instance" "NPA21_web" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public1.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet1.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
   connection {
@@ -103,8 +103,8 @@ resource "aws_instance" "NPA21_web" {
 resource "aws_instance" "NPA21_db1" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public1.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet1.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
     connection {
@@ -132,8 +132,8 @@ resource "aws_instance" "NPA21_db1" {
 resource "aws_instance" "NPA21_ansible2" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public2.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet2.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
   connection {
@@ -163,8 +163,8 @@ resource "aws_instance" "NPA21_ansible2" {
 resource "aws_instance" "NPA21_web2" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public2.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet2.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
   connection {
@@ -192,8 +192,8 @@ resource "aws_instance" "NPA21_web2" {
 resource "aws_instance" "NPA21_db2" {
   ami                    = data.aws_ami.aws-linux-2.id
   instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.Public2.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh_web.id]
+  subnet_id              = aws_subnet.NPA21_Public_Subnet2.id
+  vpc_security_group_ids = [aws_security_group.NPA21_allow_ssh_web.id]
   key_name               = var.key_name
 
     connection {
