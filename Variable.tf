@@ -3,13 +3,13 @@
 ##################################################################################
 
 variable "aws_access_key" {
-    default = "AKIA6KDTSZIXYUBPJ3SX"
+    default = ""
 }
 variable "aws_secret_key" {
-    default = "Ss9WJWrsU0wxP18GyvxuIp0yQo+jJxt5QVdXYx8t"
+    default = ""
 }
 variable "private_key_path" {
-    default = "labsuser.pem"
+    default = ""
 }
 variable "key_name" {
     default = "vockey"
